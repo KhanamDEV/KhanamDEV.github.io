@@ -10,12 +10,14 @@
     .showmenu-pc{
         display: none;
     }
+    .vision-mobile{display: block;}
+    .vision-pc{display: none;}
     #banner h1 img{width: 20px;}
     #banner h1{font-size: 24px;}
     #banner .sub-title{font-size: 14px;}
     #banner h1 img:first-child{margin-top: -25px;}
     #banner h1 img:last-child{margin-bottom: -10px;}        
-    .css-container{padding: 50px;}
+    .css-container{padding: 50px 15px;}
     #description{font-size: 14px;}
     #description br{display: none;}
     .group-title{margin-bottom: 50px;}

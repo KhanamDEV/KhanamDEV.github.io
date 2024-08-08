@@ -164,6 +164,8 @@ padding: 0 100px; display: flex; justify-content: center; flex-direction: column
     color: grey;
     font-size: 20px;
 }
+.vision-mobile{display: none;}
+.vision-pc{display: block;}
 #vision img{width: 100%;}
 
 #contact .content{text-align: center; margin-bottom: 100px;}
