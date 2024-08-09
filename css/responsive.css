@@ -5,10 +5,13 @@
     }
     #newsletter input{width: 80%;}
     .main-button{width: 75%;}
-    #header .logo{width: 40%;}
-    .showmenu-pc{
-        display: none;
-    }
+    #header .logo{width: 40%; margin: 20px;}
+    .menu{display: flex; align-items: center; margin-right: 20px;}
+    .menu-pc{padding:  0 50px;}
+    .menu-pc div:first-child{width: 100%;}
+    .menu-pc div > ul{padding-left: 0px;}
+    .showmenu-pc{display: none;}
+    .showmenu-mobile{display: block;}
     .vision-mobile{display: block;}
     .vision-pc{display: none;}
     #banner h1 img{width: 20px;}
@@ -66,4 +69,6 @@
     #case-study .list-studies img{width: 31%;}
     #contact .content{margin-bottom: 50px;}
     #philosophy .our-mission{margin: 50px 0; padding: 50px 0;}
+    footer p{margin-top: 50px;}
+    footer img{margin-bottom: 20px;}
 }

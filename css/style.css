@@ -26,7 +26,7 @@ h3{font-family: ZenMaruGothicBold;}
 p{margin-bottom: 0;}
 a{color:var(--color-text); transition: all .4s; text-decoration: none;}
 a:hover{text-decoration: none; color: var(--background-main); }
-ul{list-style: none;margin-bottom: 0}
+ul{list-style: none; margin-bottom: 0; }
 img{max-width: 100%; }
 body{
     letter-spacing: 3px;
@@ -58,6 +58,8 @@ body{
 .text-center{text-align: center;}
 #header{display: flex;justify-content: space-between; position: fixed; top: 0; left: 0; width: 100%; z-index: 999;}
 #header .logo{margin: 20px 30px}
+.showmenu-pc{display: block;}
+.showmenu-mobile{display: none;}
 #header .menu .showmenu-pc{border: 1px solid black;background-color: black; color: white; padding: 20px 30px 20px 50px; border-bottom-left-radius: 30px; cursor: pointer;}
 #header .menu .showmenu-pc i{margin-left: 30px;}
 #header .menu .showmenu-pc:hover{background-color: white;color: black;}
@@ -70,6 +72,7 @@ body{
 padding: 0 100px; display: flex; justify-content: center; flex-direction: column; align-items: flex-end; display: none;}
 .menu-pc.show{display: flex;}
 .menu-pc ul li{margin-bottom: 20px; color: white;}
+.menu-pc ul li ul{margin-top: 20px;}
 .menu-pc a{color: white;}
 .menu-pc .search{display: flex; align-items: center; justify-content: center; border: 1px solid white; padding: 10px 20px; border-radius: 30px;}
 .menu-pc .search input{background-color: transparent; border: none; color: white;}
@@ -175,5 +178,7 @@ footer{
     padding: 100px 0 50px 0;
     color: white;
 }
+footer li{margin-bottom: 20px;}
+footer li ul{margin-top: 20px;}
 footer a{text-transform: uppercase;}
 footer p{text-align: center; margin-top: 100px;}
