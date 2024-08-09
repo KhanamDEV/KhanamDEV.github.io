@@ -24,11 +24,11 @@
     #banner h1 img:first-child{margin-top: -25px;}
     #banner h1 img:last-child{margin-bottom: -10px;}        
     .css-container{padding: 50px 20px;}
-    #description{ padding: 0 20px; line-height: unset;}
+    #description{ padding: 0 20px; line-height: unset; font-size: 18pt;}
     #description br{display: none;}
     .group-title{margin-bottom: 50px;}
     .group-title h3{font-size: 24px;}
-    #news .new-item .content-new{display: flex; flex-direction: column; margin-bottom: 25px; width: 70%;}
+    #news .new-item .content-new{display: flex; flex-direction: column;  width: 70%;}
     #service .list-service{margin-top: 0; margin-bottom: 50px;}
     #service .list-service .item-service  .img{width: 100%;}
     #service .list-service .item-service .content{width: 100%;}
@@ -75,4 +75,12 @@
     #philosophy .our-mission{margin: 50px 0; padding: 50px 0;}
     footer p{margin-top: 50px;}
     footer img{margin-bottom: 20px;}
+
+    .effect{top: 0;}
+    .effect .effect-item img:first-child{top: 7%; height: 290px; width: 18%;}
+    .effect .effect-item img:last-child{top: 6%; height: 350px; width: 18%;}
+    .effect .effect-item img:nth-child(2){top: 12%;height: 320px; width: 22%;}
+    .effect .effect-item img:nth-child(4) {top: 13%; height: 330px; width: 22%; right: 11%;}
+    .effect .effect-item img:nth-child(3){top: 22%;height: 210px; width:  18%}
+
 }
