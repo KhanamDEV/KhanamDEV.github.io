@@ -2,6 +2,10 @@
     body{
         letter-spacing: 0px;
         font-size: 16px;
+        /* background: url('../images/bg_mobile.png');
+        background-size: contain;
+    background-position-y: -10px;
+    background-repeat: repeat-y; */
     }
     #newsletter input{width: 80%;}
     .main-button{width: 75%;}

@@ -29,14 +29,19 @@ a:hover{text-decoration: none; color: var(--background-main); }
 ul{list-style: none; margin-bottom: 0; }
 img{max-width: 100%; }
 body{
+    position: relative;
     letter-spacing: 3px;
     font-size: 25px;
     font-family: "ZenMaruGothicMedium";
     color: black;
     scroll-behavior: smooth;
     background-color: white;
+    /* background: url('../images/img_effect.png');
+    background-size: contain;
+    background-position-y: -300px;
+    background-repeat: repeat-y; */
 }
-.css-content{ background-color: #8080801a; }
+.css-content{ background-color: #ffffff9c; }
 .css-container{padding: 100px 0;border-bottom: 1px solid black;}
 .css-container.no-border{border-bottom: none;}
 
@@ -103,7 +108,7 @@ padding: 0 100px; display: flex; justify-content: center; flex-direction: column
 #philosophy .our-mission{margin: 150px 0 50px 0; border: 2px solid black; border-radius: 20px; padding: 100px 0 50px 0; position: relative;}
 #philosophy .our-mission p:last-child{margin-top: 50px;}
 #philosophy .our-mission .title-absolute{position: absolute; top: -45px; text-align: center; width: 100%; left: 0; font-size: 50px;}
-#philosophy .our-mission .title-absolute h3{padding: 0 20px;font-size: 50px; text-transform: uppercase; margin-bottom: 0; background-color: white; display: inline-block;}
+#philosophy .our-mission .title-absolute h3{padding: 0 20px;font-size: 50px; text-transform: uppercase; margin-bottom: 0;  display: inline-block;}
 
 #service .list-service{margin-top: 100px; margin-bottom: 100px;}
 #service .list-service .item-service{display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;}
@@ -178,7 +183,10 @@ footer{
     padding: 100px 0 50px 0;
     color: white;
 }
-footer li{margin-bottom: 20px;}
+footer li{font-size: 16px;}
+footer li{margin-bottom: 10px;}
 footer li ul{margin-top: 20px;}
 footer a{text-transform: uppercase;}
-footer p{text-align: center; margin-top: 100px;}
+footer p{text-align: center; margin-top: 50px; font-size: 16px;}
+main, footer{z-index: 99; position: relative;}
+.effect{position: absolute; top: 0; left: 0; height: 100%; z-index: 9; overflow: hidden;}
