@@ -118,7 +118,7 @@ padding: 0 100px; display: flex; justify-content: center; flex-direction: column
 #philosophy .our-mission{margin: 130px 0 50px 0; border: 2px solid black; border-radius: 20px; padding: 80px 100px 65px 100px; position: relative;}
 #philosophy .our-mission p:last-child{margin-top: 50px;}
 #philosophy .our-mission .title-absolute{position: absolute; top: -45px; text-align: center; width: 100%; left: 0; font-size: 40pt;}
-#philosophy .our-mission .title-absolute h3{padding: 0 20px;font-size: 40pt; text-transform: uppercase; margin-bottom: 0;  display: inline-block;}
+#philosophy .our-mission .title-absolute h3{padding: 0 20px;font-size: 40pt; background: white; text-transform: uppercase; margin-bottom: 0;  display: inline-block;}
 
 #service .list-service{margin-top: 100px; margin-bottom: 100px;}
 #service .list-service .item-service{display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;}
