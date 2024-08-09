@@ -77,10 +77,11 @@
     footer img{margin-bottom: 20px;}
 
     .effect{top: 0;}
-    .effect .effect-item img:first-child{top: 7%; height: 290px; width: 18%;}
-    .effect .effect-item img:last-child{top: 6%; height: 350px; width: 18%;}
-    .effect .effect-item img:nth-child(2){top: 12%;height: 320px; width: 22%;}
-    .effect .effect-item img:nth-child(4) {top: 13%; height: 330px; width: 22%; right: 11%;}
-    .effect .effect-item img:nth-child(3){top: 22%;height: 210px; width:  18%}
+    .effect .effect-item{height: 100vh;}
+    .effect .effect-item img:first-child{top: 12%; height: 290px; width: 18%;}
+    .effect .effect-item img:last-child{top: 11%; height: 350px; width: 18%;}
+    .effect .effect-item img:nth-child(2){top: 32%;height: 320px; width: 22%;}
+    .effect .effect-item img:nth-child(4) {top: 34%; height: 330px; width: 22%; right: 11%;}
+    .effect .effect-item img:nth-child(3){top: 56%;height: 210px; width:  18%}
 
 }
