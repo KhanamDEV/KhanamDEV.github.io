@@ -25,6 +25,12 @@ body[data-aos-duration='4500'] [data-aos], [data-aos][data-aos][data-aos-duratio
 
 body[data-aos-duration='5000'] [data-aos], [data-aos][data-aos][data-aos-duration='5000']{transition-duration: 5000ms;}
 
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1000px;
+    }
+}
+
 h3{font-family: ZenMaruGothicBold;}
 /* defautl */
 *{margin: 0; padding: 0;}
@@ -38,8 +44,7 @@ ul{list-style: none; margin-bottom: 0; }
 img{max-width: 100%; }
 body{
     position: relative;
-    letter-spacing: 3px;
-    font-size: 25px;
+    font-size: 16pt;
     font-family: "ZenMaruGothicMedium";
     color: black;
     scroll-behavior: smooth;
@@ -50,11 +55,11 @@ body{
     background-repeat: repeat-y; */
 }
 .css-content{ background-color: #ffffff9c; }
-.css-container{padding: 100px 0;border-bottom: 1px solid black;}
+.css-container{padding: 90px 0 100px 0;border-bottom: 1px solid black;}
 .css-container.no-border{border-bottom: none;}
 
-.group-title{text-align: center; margin-bottom: 100px;}
-.group-title h3{font-size: 50px; text-transform: uppercase;}
+.group-title{text-align: center; margin-bottom: 75px;}
+.group-title h3{font-size: 52pt; text-transform: uppercase;}
 .main-button{
     width: 300px;
     text-align: center;
@@ -70,10 +75,11 @@ body{
 
 .text-center{text-align: center;}
 #header{display: flex;justify-content: space-between; position: fixed; top: 0; left: 0; width: 100%; z-index: 999;}
-#header .logo{margin: 20px 30px}
+#header .logo{margin: 30px 0 0 55px}
+#header .logo img{width: 240px;}
 .showmenu-pc{display: block;}
 .showmenu-mobile{display: none;}
-#header .menu .showmenu-pc{border: 1px solid black;background-color: black; color: white; padding: 20px 30px 20px 50px; border-bottom-left-radius: 30px; cursor: pointer;}
+#header .menu .showmenu-pc{border: 1px solid black;background-color: black; color: white; padding: 18px 46px; border-bottom-left-radius: 30px; cursor: pointer; font-size: 24pt;}
 #header .menu .showmenu-pc i{margin-left: 30px;}
 #header .menu .showmenu-pc:hover{background-color: white;color: black;}
 
@@ -94,33 +100,32 @@ padding: 0 100px; display: flex; justify-content: center; flex-direction: column
 
 #banner{text-align: center; height: 100vh; position: relative;}
 #banner .container{display: flex; align-items: center; flex-direction: column; justify-content: center; height: 100%;}
-#banner h1{font-size: 72px;}
-#banner h1 img{width: 70px;}
+#banner h1{font-size: 56pt;}
+#banner h1 img{width: 50px;}
 #banner h1 img:first-child{margin-top: -70px;}
 #banner h1 img:last-child{margin-bottom: -35px;}
-#banner .sub-title{font-size: 30px;}
+#banner .sub-title{font-size: 22pt;}
 
 #banner .scroll{position: absolute ; bottom: 0; left: 0; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;}
-#banner .scroll img{width: fit-content; height: 80px; margin-top: 80px;}
+#banner .scroll img{width: fit-content; height: 70px; margin-top: 80px;}
 
-#description{text-align: center; line-height: 50px; font-size: 22px; margin-top: 100px;}
+#description{text-align: center; line-height: 50px; font-size: 19pt; margin-top: 100px;}
 
 #news .list-new{margin-bottom: 30px;}
-#news .new-item{display: flex; align-items: center; justify-content: space-between;}
-#news .new-item .content-new{display: flex; margin-bottom: 50px;}
+#news .new-item{display: flex; align-items: center; justify-content: space-between; margin-bottom: 45px;}
+#news .new-item .content-new{display: flex; }
 #news .new-item .content-new p:first-child{margin-right: 50px;}
-#news .new-item .content-new p{font-size: 85%;}
 
 #philosophy{text-align: center; }
 #philosophy .content p:first-child{margin-bottom: 10px;}
-#philosophy .our-mission{margin: 150px 0 50px 0; border: 2px solid black; border-radius: 20px; padding: 100px 0 50px 0; position: relative;}
+#philosophy .our-mission{margin: 130px 0 50px 0; border: 2px solid black; border-radius: 20px; padding: 80px 100px 65px 100px; position: relative;}
 #philosophy .our-mission p:last-child{margin-top: 50px;}
-#philosophy .our-mission .title-absolute{position: absolute; top: -45px; text-align: center; width: 100%; left: 0; font-size: 50px;}
-#philosophy .our-mission .title-absolute h3{padding: 0 20px;font-size: 50px; text-transform: uppercase; margin-bottom: 0;  display: inline-block;}
+#philosophy .our-mission .title-absolute{position: absolute; top: -45px; text-align: center; width: 100%; left: 0; font-size: 40pt;}
+#philosophy .our-mission .title-absolute h3{padding: 0 20px;font-size: 40pt; text-transform: uppercase; margin-bottom: 0;  display: inline-block;}
 
 #service .list-service{margin-top: 100px; margin-bottom: 100px;}
 #service .list-service .item-service{display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;}
-#service .list-service .item-service .content{width: 48%; border-radius: 20px; padding: 50px 40px; position: relative;}
+#service .list-service .item-service .content{width: 48%; border-radius: 20px; padding: 50px 35px; position: relative;}
 #service .list-service .item-service:first-child .content::before{
     content: "";
     height: 20px;
@@ -191,6 +196,7 @@ footer{
     padding: 100px 0 50px 0;
     color: white;
 }
+footer img{width: 200px;}
 footer li{font-size: 16px;}
 footer li{margin-bottom: 10px;}
 footer li ul{margin-top: 20px;}
