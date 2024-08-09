@@ -17,6 +17,14 @@ root{
     --margin-index-mobile: 70px;
     --color-green: #159DD9 ;
 }
+body[data-aos-duration='3500'] [data-aos], [data-aos][data-aos][data-aos-duration='3500']{transition-duration: 3500ms;}
+
+body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos][data-aos-duration='4000']{transition-duration: 4000ms;}
+
+body[data-aos-duration='4500'] [data-aos], [data-aos][data-aos][data-aos-duration='4500']{transition-duration: 4500ms;}
+
+body[data-aos-duration='5000'] [data-aos], [data-aos][data-aos][data-aos-duration='5000']{transition-duration: 5000ms;}
+
 h3{font-family: ZenMaruGothicBold;}
 /* defautl */
 *{margin: 0; padding: 0;}
@@ -190,3 +198,10 @@ footer a{text-transform: uppercase;}
 footer p{text-align: center; margin-top: 50px; font-size: 16px;}
 main, footer{z-index: 99; position: relative;}
 .effect{position: absolute; top: 0; left: 0; height: 100%; z-index: 9; overflow: hidden;}
+.effect .effect-item{position: relative;width: 100vw;height: 240vh;}
+.effect .effect-item img{position: absolute;width: 20%;}
+.effect .effect-item img:first-child{top: 0;left: 0;}
+.effect .effect-item img:nth-child(2){top: 15%; left: 20%;}
+.effect .effect-item img:nth-child(3){bottom: 0;left: 35%;}
+.effect .effect-item img:nth-child(4){top: 20%;right: 15%;}
+.effect .effect-item img:last-child{top: 0;right:  0;}
