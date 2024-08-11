@@ -76,7 +76,7 @@
     footer p{margin-top: 50px;}
     footer img{margin-bottom: 20px;}
 
-    .effect{top: 0;}
+    .effect{top: 0; height: 100%;}
     .effect .effect-item{height: 100vh;}
     .effect .effect-item img:first-child{top: 12%; height: 290px; width: 18%;}
     .effect .effect-item img:last-child{top: 11%; height: 350px; width: 18%;}

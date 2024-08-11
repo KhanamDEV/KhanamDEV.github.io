@@ -196,6 +196,7 @@ main, footer{z-index: 99; position: relative;}
 .effect{position: absolute; top: -200px; left: 0; height:  calc(100% + 200px)  ; z-index: 9; overflow: hidden; }
 .effect .effect-item{position: relative;width: 100vw;height: 240vh;}
 .effect .effect-item img{position: absolute;width: 20%;}
+.effect .effect-item img.hide{display: none;}
 .effect .effect-item img:first-child{top: 0;left: 0; --animate-duration: 2.5s}
 .effect .effect-item img:nth-child(2){top: 20%; left: 20%; --animate-duration: 1s}
 .effect .effect-item img:nth-child(3){bottom: -200px;left: 35%; --animate-duration: 3s}
