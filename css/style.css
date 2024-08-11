@@ -17,14 +17,7 @@ root{
     --margin-index-mobile: 70px;
     --color-green: #159DD9 ;
 }
-body[data-aos-duration='2000'] [data-aos], [data-aos][data-aos][data-aos-duration='2000']{transition-duration: 2000ms;}
-body[data-aos-duration='3500'] [data-aos], [data-aos][data-aos][data-aos-duration='3500']{transition-duration: 3500ms;}
-body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos][data-aos-duration='4000']{transition-duration: 4000ms;}
-body[data-aos-duration='4500'] [data-aos], [data-aos][data-aos][data-aos-duration='4500']{transition-duration: 4500ms;}
-body[data-aos-duration='5000'] [data-aos], [data-aos][data-aos][data-aos-duration='5000']{transition-duration: 5000ms;}
-body[data-aos-duration='5500'] [data-aos], [data-aos][data-aos][data-aos-duration='5500']{transition-duration: 5500ms;}
-body[data-aos-duration='6000'] [data-aos], [data-aos][data-aos][data-aos-duration='6000']{transition-duration: 6000ms;}
-body[data-aos-duration='6500'] [data-aos], [data-aos][data-aos][data-aos-duration='6500']{transition-duration: 6500ms;}
+
 
 @media (min-width: 1400px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
@@ -203,8 +196,8 @@ main, footer{z-index: 99; position: relative;}
 .effect{position: absolute; top: -200px; left: 0; height:  calc(100% + 200px)  ; z-index: 9; overflow: hidden; }
 .effect .effect-item{position: relative;width: 100vw;height: 240vh;}
 .effect .effect-item img{position: absolute;width: 20%;}
-.effect .effect-item img:first-child{top: 0;left: 0;}
-.effect .effect-item img:nth-child(2){top: 20%; left: 20%;}
-.effect .effect-item img:nth-child(3){bottom: -200px;left: 35%;}
-.effect .effect-item img:nth-child(4){top: 25%;right: 15%;}
-.effect .effect-item img:last-child{top: 0;right:  0;}
+.effect .effect-item img:first-child{top: 0;left: 0; --animate-duration: 2.5s}
+.effect .effect-item img:nth-child(2){top: 20%; left: 20%; --animate-duration: 1s}
+.effect .effect-item img:nth-child(3){bottom: -200px;left: 35%; --animate-duration: 3s}
+.effect .effect-item img:nth-child(4){top: 25%;right: 15%; --animate-duration: 2s}
+.effect .effect-item img:last-child{top: 0;right:  0; --animate-duration: 1.5s}

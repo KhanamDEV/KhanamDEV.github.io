@@ -1,5 +1,4 @@
 $(function(){
-    AOS.init();
     $(".showmenu-pc").click(function(){
         $(".menu-pc").addClass("animate__animated animate__fadeInDownBig show")
     });
