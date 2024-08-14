@@ -205,11 +205,11 @@ main, footer{z-index: 99; position: relative;}
     transition: all .4s
 }
 /* .effect .effect-item img.hide{display: none;} */
-.effect .effect-item img:first-child{top: 0;left: 0; animation-name: slideup; animation-duration: 4s;}
-.effect .effect-item img:nth-child(2){top: 20%; left: 20%; animation-name: slideupSecond; animation-duration: 4s;}
-.effect .effect-item img:nth-child(3){top: 70%;left: 35%; animation-name: slideupThird; animation-duration: 4s; }
-.effect .effect-item img:nth-child(4){top: 25%;right: 15%; animation-name: slideupFourth; animation-duration: 4s;}
-.effect .effect-item img:last-child{top: 0;right:  0; animation-name: slideupFifth; animation-duration: 4s;}
+.effect .effect-item img:first-child{top: 0;left: 0; animation-name: slideup; animation-duration: 6s;}
+.effect .effect-item img:nth-child(2){top: 20%; left: 20%; animation-name: slideupSecond; animation-duration: 6s;}
+.effect .effect-item img:nth-child(3){top: 70%;left: 35%; animation-name: slideupThird; animation-duration: 6s; }
+.effect .effect-item img:nth-child(4){top: 25%;right: 15%; animation-name: slideupFourth; animation-duration: 6s;}
+.effect .effect-item img:last-child{top: 0;right:  0; animation-name: slideupFifth; animation-duration: 6s;}
 
 @keyframes slideup {
     0% {transform: translateY(100%);}
