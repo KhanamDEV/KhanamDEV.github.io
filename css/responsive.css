@@ -1,3 +1,8 @@
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 1000px;
+  }
+}
 @media (max-width: 576px) {
     body{
         letter-spacing: 0px;
@@ -19,16 +24,17 @@
     .vision-mobile{display: block;}
     .vision-pc{display: none;}
     #banner h1 img{width: 20px;}
-    #banner h1{font-size: 24px;}
+    #banner h1{font-size: 28px;}
     #banner .sub-title{font-size: 14px;}
     #banner h1 img:first-child{margin-top: -25px;}
     #banner h1 img:last-child{margin-bottom: -10px;}        
     .css-container{padding: 50px 20px;}
-    #description{ padding: 0 20px; line-height: unset; font-size: 16pt;}
+    #description{ padding: 0 32px; line-height: unset; font-size: 18px;}
     #description br{display: none;}
     .group-title{margin-bottom: 50px;}
-    .group-title h3{font-size: 24px;}
-    #news .new-item .content-new{display: flex; flex-direction: column;  width: 70%;}
+    .group-title h3{font-size: 35px;}
+    #news .new-item .content-new{display: flex; flex-direction: column;  width: 85%;}
+    #news .list-new{padding: 0 ; margin-bottom: 50px;}
     #service .list-service{margin-top: 0; margin-bottom: 50px;}
     #service .list-service .item-service  .img{width: 100%;}
     #service .list-service .item-service .content{width: 100%;}
@@ -65,23 +71,32 @@
       border-right: 20px solid transparent;
       border-bottom: 40px solid #9999BD;
     }
-    #service .list-service .item-service .content h4{font-size: 20px;}
-    footer{padding: 50px 0 25px 0;}
+    #service .list-service .item-service .content h4{font-size: 23px;}
 
+    footer{padding: 50px 0 25px 0;}
+    #news .new-item{margin-bottom: 20px;}
     #news .new-item .content-new p{font-size: 100%;}
+    #news .new-item .content-new p:last-child{font-size: 17px;}
     #case-study .list-studies{justify-content: center;}
     #case-study .list-studies img{width: 31%;}
-    #contact .content{margin-bottom: 50px;}
+    #contact .content{margin-bottom: 50px; font-size: 19px;}
     #philosophy .our-mission{margin: 50px 0; padding: 50px 0;}
-    footer p{margin-top: 50px;}
+    footer p{margin-top: 50px; font-size: 13px;}
     footer img{margin-bottom: 20px;}
-
+    footer a{font-size: 16px;}
     .effect{top: 0; height: 100%;}
     .effect .effect-item{height: 100vh;}
-    .effect .effect-item img:first-child{top: 12%; height: 290px; width: 18%;}
-    .effect .effect-item img:last-child{top: 11%; height: 350px; width: 18%;}
-    .effect .effect-item img:nth-child(2){top: 32%;height: 320px; width: 22%;}
-    .effect .effect-item img:nth-child(4) {top: 34%; height: 330px; width: 22%; right: 11%;}
+    .effect .effect-item img:first-child{top: 12%; height: 290px; width: 18%; left: -13px;}
+    .effect .effect-item img:last-child{top: 11%; height: 350px; width: 22%;}
+    .effect .effect-item img:nth-child(2){top: 32%;height: 320px; width: 25%; left: 15%;}
+    .effect .effect-item img:nth-child(4) {top: 34%; height: 330px; width: 25%; right: 15%;}
     .effect .effect-item img:nth-child(3){top: 56%;height: 210px; width:  18%}
-
+    .main-button{font-size: 17px;}
+    #contact .main-button{width: 80%; font-size: 21px;}
+    #philosophy .our-mission p{font-size: 19px;}
+    #philosophy .our-mission p:last-child{font-size: 17px;}
+    #philosophy .content p:first-child{margin-bottom: 19px;}
+    #philosophy .content p{text-align: justify; font-size: 19px;}
+    #service .content p{font-size: 19px;}
+    #newsletter input{font-size: 18px;}
 }
