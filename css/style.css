@@ -212,56 +212,26 @@ main, footer{z-index: 99; position: relative;}
 .effect .effect-item img:last-child{top: 0;right:  0; animation-name: slideupFifth; animation-duration: 4s;}
 
 @keyframes slideup {
-    0% {
-      transform: translateY(100%);
-    }
-   
-      100% {
-        transform: translateY(-100%);
-      }
-    
+    0% {transform: translateY(100%);}
+    100% {transform: translateY(-100%);}
 }
 
 @keyframes slideupSecond {
-    0% {
-      transform: translateY(100%);
-    }
-   
-      100% {
-        transform: translateY(calc(-100% - 30%));
-      }
-    
+    0% {transform: translateY(100%);}
+    100% {transform: translateY(calc(-100% - 30%));}
 }
 
 @keyframes slideupThird {
-    0% {
-      transform: translateY(100%);
-    }
-   
-      100% {
-        transform: translateY(calc(-100% - 100%));
-      }
-    
+    0% {transform: translateY(100%);}
+    100% {transform: translateY(calc(-100% - 120%));}
 }
 
 @keyframes slideupFourth {
-    0% {
-      transform: translateY(100%);
-    }
-   
-      100% {
-        transform: translateY(calc(-100% - 35%));
-      }
-    
+    0% {transform: translateY(100%);}
+    100% {transform: translateY(calc(-100% - 35%));}
 }
 
 @keyframes slideupFifth {
-    0% {
-      transform: translateY(100%);
-    }
-   
-      100% {
-        transform: translateY(-100%);
-      }
-    
+    0% {transform: translateY(100%);}
+    100% {transform: translateY(-100%);}
 }
