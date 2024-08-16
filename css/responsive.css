@@ -13,7 +13,7 @@
     background-repeat: repeat-y; */
     }
     #newsletter input{width: 80%;}
-    .main-button{width: 75%;}
+    .main-button{width: 75%; margin-top: 50px;}
     #header .logo{width: 40%; margin: 20px;}
     .menu{display: flex; align-items: center; margin-right: 20px;}
     .menu-pc{padding:  0 50px;}
@@ -28,13 +28,14 @@
     #banner .sub-title{font-size: 14px;}
     #banner h1 img:first-child{margin-top: -25px;}
     #banner h1 img:last-child{margin-bottom: -10px;}        
-    .css-container{padding: 50px 20px;}
+    .css-container{padding: 60px 20px;}
+    .css-container.has-title{padding: 55px 20px 60px 20px;}
     #description{ padding: 0 32px; line-height: unset; font-size: 18px;}
     #description br{display: none;}
     .group-title{margin-bottom: 50px;}
     .group-title h3{font-size: 35px;}
     #news .new-item .content-new{display: flex; flex-direction: column;  width: 85%;}
-    #news .list-new{padding: 0 ; margin-bottom: 50px;}
+    #news .list-new{padding: 0 ; }
     #service .list-service{margin-top: 0; margin-bottom: 50px;}
     #service .list-service .item-service  .img{width: 100%;}
     #service .list-service .item-service .content{width: 100%;}

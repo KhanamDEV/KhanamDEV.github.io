@@ -47,7 +47,9 @@ body{
     overflow-x: hidden;
 }
 .css-content{ background-color: #ffffff9c; }
-.css-container{padding: 90px 0 120px 0;border-bottom: 1px solid black;}
+
+.css-container{padding: 100px 0 100px 0;border-bottom: 1px solid black;}
+.css-container.has-title{padding: 80px 0 100px 0;}
 .css-container.no-border{border-bottom: none;}
 
 .group-title{text-align: center; margin-bottom: 75px;}
@@ -60,7 +62,7 @@ body{
     border-radius: 30px;
     background-color: black;
     color: white;
-    margin: 0 auto;
+    margin: 60px auto 0 auto;
     display: block;
     border: 1px solid black;
 }
@@ -104,7 +106,7 @@ padding: 0 100px; display: flex; justify-content: center; flex-direction: column
 
 #description{text-align: center; line-height: 50px; font-size: 24px; margin-top: 100px;}
 
-#news .list-new{margin-bottom: 80px; padding: 0 180px;}
+#news .list-new{ padding: 0 180px;}
 #news .new-item{display: flex; align-items: center; justify-content: space-between; margin-bottom: 45px;}
 #news .new-item .content-new{display: flex; }
 #news .new-item .content-new p:first-child{margin-right: 50px;}
@@ -113,13 +115,13 @@ padding: 0 100px; display: flex; justify-content: center; flex-direction: column
 #philosophy .content p{font-size: 21px;}
 #philosophy .content p:first-child{margin-bottom: 10px; }
 #philosophy .content p:last-child{margin-bottom: 10px; letter-spacing: -0.5px;}
-#philosophy .our-mission{margin: 130px 0 80px 0; border: 2px solid black; border-radius: 20px; padding: 80px 100px 65px 100px; position: relative;}
+#philosophy .our-mission{margin: 130px 0 0 0; border: 2px solid black; border-radius: 20px; padding: 80px 100px 65px 100px; position: relative;}
 #philosophy .our-mission p{font-size: 20pt;}
 #philosophy .our-mission p:last-child{margin-top: 50px;}
 #philosophy .our-mission .title-absolute{position: absolute; top: -45px; text-align: center; width: 100%; left: 0; font-size: 40pt;}
 #philosophy .our-mission .title-absolute h3{padding: 0 20px;font-size: 40pt; position: relative; background: white; text-transform: uppercase; margin-bottom: 0;  display: inline-block;}
 #service .content p{font-size: 21px; line-height: 40px;}
-#service .list-service{margin-top: 120px; margin-bottom: 120px;}
+#service .list-service{margin-top: 120px; }
 #service .list-service .item-service{display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;}
 #service .list-service .item-service .content{width: 48%; border-radius: 20px; padding: 50px 35px; position: relative;}
 #service .list-service .item-service:first-child .content::before{
@@ -170,7 +172,7 @@ padding: 0 100px; display: flex; justify-content: center; flex-direction: column
 #case-study .list-studies img:hover{transform: scale(1.1) ;}
 
 #newsletter{text-align: center;}
-#newsletter input{margin-bottom: 50px;
+#newsletter input{
     background-color: transparent;
     border: 1px solid black;
     height: 70px; 
@@ -185,7 +187,7 @@ padding: 0 100px; display: flex; justify-content: center; flex-direction: column
 .vision-pc{display: block;}
 #vision img{width: 100%;}
 
-#contact .content{text-align: center; margin-bottom: 100px; font-size: 20pt;}
+#contact .content{text-align: center; font-size: 20pt;}
 
 #contact .main-button{font-size: 40px; width: 480pt; border-radius: 60px; }
 
