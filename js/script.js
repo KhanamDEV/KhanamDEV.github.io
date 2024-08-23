@@ -1,10 +1,11 @@
 $(function () {
     $(".showmenu-pc").click(function () {
-        $(".menu-pc").addClass("animate__animated animate__fadeInDownBig show");
+        $(".menu-pc").addClass(" show");
 
     });
     $(".showmenu-mobile").click(function () {
         $(".menu-pc").addClass("show")
+
     });
     $(".closemenu-pc").click(function () {
         $(".menu-pc").removeClass("show")
@@ -12,7 +13,7 @@ $(function () {
 
     $(".close-showmenu-mobile").click(function () {
         setTimeout(() => {
-            $(".menu-pc").removeClass("animate__animated animate__fadeInDownBig show")
+            $(".menu-pc").removeClass(" show")
         }, 500)
     });
     $(".openbtn").click(function () {
