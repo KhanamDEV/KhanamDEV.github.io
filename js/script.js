@@ -1,12 +1,22 @@
 $(function () {
     $(".showmenu-pc").click(function () {
-        $(".menu-pc").addClass("animate__animated animate__fadeInDownBig show")
+        $(".menu-pc").addClass("animate__animated animate__fadeInDownBig show");
+
     });
     $(".showmenu-mobile").click(function () {
-        $(".menu-pc").addClass("animate__animated animate__fadeInDownBig show")
+        $(".menu-pc").addClass("show")
     });
     $(".closemenu-pc").click(function () {
-        $(".menu-pc").removeClass("animate__animated animate__fadeInDownBig show")
+        $(".menu-pc").removeClass("show")
+    });
+
+    $(".close-showmenu-mobile").click(function () {
+        setTimeout(() => {
+            $(".menu-pc").removeClass("animate__animated animate__fadeInDownBig show")
+        }, 500)
+    });
+    $(".openbtn").click(function () {
+        $(".openbtn").toggleClass('active');
     });
 
     let previousHeight = 0;

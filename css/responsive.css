@@ -17,7 +17,6 @@
     #header .logo{width: 40%; margin: 20px;}
     .menu{display: flex; align-items: center; margin-right: 20px;}
     .menu-pc{padding:  0 50px;}
-    .menu-pc div:first-child{width: 100%;}
     .menu-pc div > ul{padding-left: 0px;}
     .showmenu-pc{display: none;}
     .showmenu-mobile{display: block;}
@@ -100,4 +99,14 @@
     #philosophy .content p{text-align: justify; font-size: 19px;}
     #service .content p{font-size: 19px;}
     #newsletter input{font-size: 18px;}
+
+    .close-showmenu-mobile{
+      display: block;
+      position: absolute;
+      top: 9px;
+      right: 20px;
+    }
+    .closemenu-pc{display: none;}
+    .div-menu{width: 100%;}
+    
 }
