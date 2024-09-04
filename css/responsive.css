@@ -12,6 +12,7 @@
     background-position-y: -10px;
     background-repeat: repeat-y; */
     }
+    br.mobile{display: block;}
     #newsletter input{width: 80%;}
     .main-button{width: 75%; margin-top: 50px;}
     #header .logo{width: 40%; margin: 20px;}
@@ -27,9 +28,11 @@
     #banner .sub-title{font-size: 14px;}
     #banner h1 img:first-child{margin-top: -25px;}
     #banner h1 img:last-child{margin-bottom: -10px;}        
-    .css-container{padding: 60px 20px;}
+    .css-container{padding: 60px 20px; border-bottom: none; position: relative;}
+    .css-container::before{content: ""; height: 1px; background-color: black; width: 80%; position: absolute; bottom: 0; left: calc(10%);}
     .css-container.has-title{padding: 55px 20px 60px 20px;}
-    #description{ padding: 0 32px; line-height: unset; font-size: 18px;}
+    #description{ line-height: unset; font-size: 18px;}
+    #description .css-container{padding: 60px 50px;}
     #description br{display: none;}
     .group-title{margin-bottom: 50px;}
     .group-title h3{font-size: 35px;}
@@ -97,9 +100,10 @@
     #philosophy .our-mission p:last-child{font-size: 17px;}
     #philosophy .content p:first-child{margin-bottom: 19px;}
     #philosophy .content p{text-align: justify; font-size: 19px;}
-    #service .content p{font-size: 19px;}
+    #service .content p{font-size: 19px; line-height: 30px;}
     #newsletter input{font-size: 18px;}
-
+    #service .content.text-center p{text-align: justify;}
+    #service .content.text-center p br{display: none}
     .close-showmenu-mobile{
       display: block;
       position: absolute;

@@ -326,7 +326,7 @@ main, footer{z-index: 99; position: relative;}
     transform: translateY(-6px) rotate(45deg);
     width: 30%;
 }
-
+br.mobile{display: none;}
 .close-showmenu-mobile{display: none;}
 .closemenu-pc{display: block;}
 
