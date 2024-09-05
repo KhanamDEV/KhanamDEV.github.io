@@ -83,7 +83,7 @@
     #case-study .list-studies{justify-content: center;}
     #case-study .list-studies img{width: 31%;}
     #contact .content{margin-bottom: 50px; font-size: 19px;}
-    #philosophy .our-mission{margin: 50px 0; padding: 50px 0;}
+    #philosophy .our-mission{margin: 50px 0; padding: 50px 0 30px 0;}
     footer p{margin-top: 50px; font-size: 13px;}
     footer img{margin-bottom: 20px;}
     footer a{font-size: 16px;}
@@ -97,7 +97,7 @@
     .main-button{font-size: 17px;}
     #contact .main-button{width: 80%; font-size: 21px;}
     #philosophy .our-mission p{font-size: 19px;}
-    #philosophy .our-mission p:last-child{font-size: 17px;}
+    #philosophy .our-mission p:last-child{font-size: 17px; margin-top: 15px;}
     #philosophy .content p:first-child{margin-bottom: 19px;}
     #philosophy .content p{text-align: justify; font-size: 19px;}
     #service .content p{font-size: 19px; line-height: 30px;}
