@@ -217,10 +217,10 @@ main, footer{z-index: 99; position: relative;}
 }
 /* .effect .effect-item img.hide{display: none;} */
 .effect .effect-item img:first-child{ width: 18.5%;  top: 0;left: 0; animation-name: slideup; animation-duration: 20s;}
-.effect .effect-item img:nth-child(2){top: 18%; left: 20%; animation-name: slideupSecond; animation-duration: 21s;}
-.effect .effect-item img:nth-child(3){top: 70%;left: 35%; animation-name: slideupThird; animation-duration: 22s; }
-.effect .effect-item img:nth-child(4){top: 25%;right: 15%; animation-name: slideupFourth; animation-duration: 23s;}
-.effect .effect-item img:last-child{top: 0;right:  0; animation-name: slideupFifth; animation-duration: 24s;}
+.effect .effect-item img:nth-child(2){top: 18%; left: 20%; animation-name: slideupSecond; animation-duration: 22s;}
+.effect .effect-item img:nth-child(3){top: 70%;left: 35%; animation-name: slideupThird; animation-duration: 24s; }
+.effect .effect-item img:nth-child(4){top: 25%;right: 15%; animation-name: slideupFourth; animation-duration: 26s;}
+.effect .effect-item img:last-child{top: 0;right:  0; animation-name: slideupFifth; animation-duration: 27s;}
 
 @keyframes slideup {
     0% {transform: translateY(100%);}
