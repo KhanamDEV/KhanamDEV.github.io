@@ -23,7 +23,8 @@
     .showmenu-mobile{display: block;}
     .vision-mobile{display: block;}
     .vision-pc{display: none;}
-    #banner h1 img{width: 20px;}
+    #banner h1::before{width: 20px; height: 18px; left: -30px;}
+    #banner h1::after{width: 20px; height: 18px; right: -30px; bottom: -5px;}
     #banner h1{font-size: 28px;}
     #banner .sub-title{font-size: 14px;}
     #banner h1 img:first-child{margin-top: -25px;}
