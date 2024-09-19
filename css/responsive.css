@@ -136,6 +136,9 @@
   .menu-pc.show .div-menu > ul > li:nth-child(7){
       animation: fadeInLeft 0.3s ease 0.6s 1 forwards;
   }
+  .menu-pc.show .div-menu > ul > li:nth-child(8){
+    animation: fadeInLeft 0.3s ease 0.65s 1 forwards;
+}
   
     
 }

@@ -358,6 +358,9 @@ br.mobile{display: none;}
 .menu-pc.show .div-menu > ul > li:nth-child(7){
     animation: fadeInRight 0.3s ease 0.6s 1 forwards;
 }
+.menu-pc.show .div-menu > ul > li:nth-child(8){
+    animation: fadeInRight 0.3s ease 0.65s 1 forwards;
+}
 
 #overlay{
     position:fixed;
