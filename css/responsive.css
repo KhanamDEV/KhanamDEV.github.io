@@ -1,144 +1,73 @@
-@media (min-width: 1200px) {
-  .container, .container-lg, .container-md, .container-sm, .container-xl {
-      max-width: 1000px;
-  }
+@media (max-width: 769px) {
+    #banner-home .content h2{font-size: 30px; text-align: center}
+    #header-main .menu{justify-content: end; width: 100%}
+    #header-main{flex-direction: column; align-items: start}
 }
-@media (max-width: 576px) {
-    body{
-        letter-spacing: 0px;
-        font-size: 16px;
-        /* background: url('../images/bg_mobile.png');
-        background-size: contain;
-    background-position-y: -10px;
-    background-repeat: repeat-y; */
+    @media (max-width: 475px) {
+        #feature .content .item-content h4:before{display: none}
+    h1{font-size: 96px;}
+    h2{font-size: 44px}
+    h3{font-size: 20px}
+    h4{font-size: 18px}
+    p{font-size: 16px}
+    main{margin-top: 85px}
+    #header-main{padding: 15px}
+    #header-main #nav{display: none}
+    #header-main .second-link{display: none}
+    #header-main .logo{display: flex; justify-content: space-between; align-items: center; width: 100%}
+    #header-main .logo img{display: block; }
+    #header-main .logo span{display: none}
+    #header-main .open-nav-mobile{display: block; font-size: 23px}
+    #header-main #nav-mobile{display: block; height: 100vh; background-color: white; position: absolute; top: 0; right: -100%;
+        padding: 20px;
+        transition: all 0.3s;
     }
-    br.mobile{display: block;}
-    #newsletter input{width: 80%;}
-    .main-button{width: 75%; margin-top: 50px;}
-    #header .logo{width: 40%; margin: 20px;}
-    .menu{display: flex; align-items: center; margin-right: 20px;}
-    .menu-pc{padding:  0 50px;}
-    .menu-pc div > ul{padding-left: 0px;}
-    .showmenu-pc{display: none;}
-    .showmenu-mobile{display: block;}
-    .vision-mobile{display: block;}
-    .vision-pc{display: none;}
-    #banner h1::before{width: 20px; height: 18px; left: -30px;}
-    #banner h1::after{width: 20px; height: 18px; right: -30px; bottom: -5px;}
-    #banner h1{font-size: 28px;}
-    #banner .sub-title{font-size: 14px;}
-    #banner h1 img:first-child{margin-top: -25px;}
-    #banner h1 img:last-child{margin-bottom: -10px;}        
-    .css-container{padding: 60px 20px; border-bottom: none; position: relative;}
-    .css-container::before{content: ""; height: 1px; background-color: black; width: 80%; position: absolute; bottom: 0; left: calc(10%);}
-    .css-container.has-title{padding: 55px 20px 60px 20px;}
-    #description{ line-height: unset; font-size: 18px;}
-    #description .css-container{padding: 60px 50px;}
-    #description br{display: none;}
-    .group-title{margin-bottom: 50px;}
-    .group-title h3{font-size: 35px;}
-    #news .new-item .content-new{display: flex; flex-direction: column;  width: 85%;}
-    #news .list-new{padding: 0 ; }
-    #service .list-service{margin-top: 0; margin-bottom: 50px;}
-    #service .list-service .item-service  .img{width: 100%;}
-    #service .list-service .item-service .content{width: 100%;}
-    #service .list-service .item-service .img img{width: 100%;}
-    #service .list-service .item-service{
-        flex-direction: column-reverse;
+    #header-main #nav-mobile.open{right: 0;}
+    #header-main #nav-mobile ul{padding-left: 0}
+    #header-main #nav-mobile ul li{padding: 15px 0 }
+    #header-main #nav-mobile ul li a{font-size: 20px}
+    #header-main #nav-mobile ul .line{height: 1px; background-color: #9b9a9a; width: 100%}
+    #header-main .close-menu{text-align: right; font-size: 23px}
+    #contact .contact-info ul{padding: 30px 40px}
+    .title-bg{margin-bottom: 30px}
+    #contact .contact-info{margin-top: 30px}
+    #contact form{padding: 15px}
+    #contact form >div{margin-bottom: 20px !important;}
+    footer ul{padding-left: 0; margin-bottom: 30px}
+    footer .logo{margin-bottom: 10px;}
+    #flow .list-step-first-second{flex-direction: column}
+    #flow .step-circle{display: flex; justify-content: center}
+    #flow .step-circle img{width: 80%}
+    #flow .step-circle .content p{font-size: 22px}
+    #flow .step-circle .step-name{left: -7px}
+    #flow .list-step-third-four{flex-direction: column-reverse}
+    #flow .list-step-third-four .step-four{margin-top: 30px}
+    #flow .list-step-third-four .step-four .top img{display: none}
+    #flow .list-step-third-four .step-four .content{position: relative; background-image: url("../images/bg_step_4.png") ;padding: 15px 30px; background-size: 100% 100%; background-repeat: no-repeat}
+    #flow .list-step-third-four .step-four .content h3{font-size: 24px}
+    #flow .wrap-step .arrow-2{right: -50px}
+    #flow .step-five{margin-top: 10px}
+    #flow .step-five img{display: none}
+    #flow .step-five .content{position: relative; background-image: url("../images/bg_step_5.png") ;padding: 15px; background-size: 100% 100%; background-repeat: no-repeat}
+    #banner-home .content h2{font-size: 21px; text-align: center; text-shadow: unset}
+        #banner-home .content h2 span{background-color: #ffffff94}
+    #introduce .content-introduce h3{text-align: center;width: 100%;}
+    .padding-main {
+        padding: 20px 0;
     }
-    #philosophy .our-mission .title-absolute{top: -55px;}
-    #philosophy .our-mission .title-absolute h3{font-size: 20px;}
-    #service .list-service .item-service .content{padding: 25px 20px;}
-    #service .list-service .item-service:nth-child(2){
-        flex-direction: column;
-    }
-    #service .list-service .item-service:first-child .content::before{
-        top: -58px;
-        left: 40px;
-        border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-bottom: 40px solid #F39C83;
-    }
-    #service .list-service .item-service:nth-child(2) .content::before{
-        top: -58px;
-        left: calc(50% - 20px);
-        border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-bottom: 40px solid #8ECBDA;
-    }
-
-    #service .list-service .item-service:nth-child(3) .content::before{
-        top: -58px;
-        right: 40px;
-        left: unset;
-        border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-bottom: 40px solid #9999BD;
-    }
-    #service .list-service .item-service .content h4{font-size: 23px;}
-
-    footer{padding: 50px 0 25px 0;}
-    #news .new-item{margin-bottom: 20px;}
-    #news .new-item .content-new p{font-size: 100%;}
-    #news .new-item .content-new p:last-child{font-size: 17px;}
-    #case-study .list-studies{justify-content: center;}
-    #case-study .list-studies img{width: 31%;}
-    #contact .content{margin-bottom: 50px; font-size: 19px;}
-    #contact .css-container::before{display: none;}
-    #philosophy .our-mission{margin: 50px 0; padding: 50px 0 30px 0;}
-    footer p{margin-top: 50px; font-size: 13px;}
-    footer img{margin-bottom: 20px;}
-    footer a{font-size: 16px;}
-    .effect{top: 0; height: 100%;}
-    .effect .effect-item{height: 100vh;}
-    .effect .effect-item img:first-child{top: 12%; height: 290px; width: 18%; left: -13px;}
-    .effect .effect-item img:last-child{top: 11%; height: 350px; width: 22%;}
-    .effect .effect-item img:nth-child(2){top: 32%;height: 320px; width: 25%; left: 15%;}
-    .effect .effect-item img:nth-child(4) {top: 34%; height: 330px; width: 25%; right: 15%;}
-    .effect .effect-item img:nth-child(3){top: 56%;height: 210px; width:  18%}
-    .main-button{font-size: 17px;}
-    #contact .main-button{width: 80%; font-size: 21px;}
-    #philosophy .our-mission p{font-size: 19px;}
-    #philosophy .our-mission p:last-child{font-size: 17px; margin-top: 15px;}
-    #philosophy .content p:first-child{margin-bottom: 19px;}
-    #philosophy .content p{text-align: justify; font-size: 19px;}
-    #service .content p{font-size: 19px; line-height: 30px;}
-    #newsletter input{font-size: 18px;}
-    #service .content.text-center p{text-align: justify;}
-    #service .content.text-center p br{display: none}
-    .close-showmenu-mobile{
-      display: block;
-      position: absolute;
-      top: 9px;
-      right: 20px;
-    }
-    .closemenu-pc{display: none;}
-    .div-menu{width: 100%;}
-    .menu-pc .div-menu > ul > li{display: none; transform: translateX(-100%);}
-    .menu-pc.show .div-menu > ul > li:nth-child(1){
-      animation: fadeInLeft 0.3s ease 0.3s 1 forwards;
-  }
-  .menu-pc.show .div-menu > ul > li:nth-child(2){
-      animation: fadeInLeft 0.3s ease 0.35s 1 forwards;
-  }
-  .menu-pc.show .div-menu > ul > li:nth-child(3){
-      animation: fadeInLeft 0.3s ease 0.4s 1 forwards;
-  }
-  .menu-pc.show .div-menu > ul > li:nth-child(4){
-      animation: fadeInLeft 0.3s ease 0.45s 1 forwards;
-  }
-  .menu-pc.show .div-menu > ul > li:nth-child(5){
-      animation: fadeInLeft 0.3s ease 0.5s 1 forwards;
-  }
-  .menu-pc.show .div-menu > ul > li:nth-child(6){
-    animation: fadeInLeft 0.3s ease 0.55s 1 forwards;
-  }
-  .menu-pc.show .div-menu > ul > li:nth-child(7){
-      animation: fadeInLeft 0.3s ease 0.6s 1 forwards;
-  }
-  .menu-pc.show .div-menu > ul > li:nth-child(8){
-    animation: fadeInLeft 0.3s ease 0.65s 1 forwards;
-}
-  
-    
+    #feature .content{background-size: 1000% 1000%; background-position: center;background-repeat: no-repeat;  padding: 20px 0 5px 0 ; }
+    #feature .content .item-content{padding: 0; margin-bottom: 30px}
+    #feature .content .item-content p{margin-left: 40px}
+    #feature .content .item-content h4{margin-bottom: 0}
+    #example .item-content h4{ margin: 10px 0}
+    #example .item-content{margin-bottom: 30px}
+    #example .item-content.reverse{flex-direction: column-reverse}
+    #example .list-example img{max-width: 100%}
+        #example .list-example{padding: 0}
+        #example .list-example > div{margin-bottom: 30px !important;}
+    #example .item-content .img .wrap-image{width: 100%}
+    #example .item-content .content p{width: 100%}
+    #example .title-bg{margin-bottom: 30px}
+        #contact .contact-info ul li{font-size: 18px}
+        .table-price table {font-size: 14px}
 }
