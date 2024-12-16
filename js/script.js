@@ -1,67 +1,22 @@
 $(function () {
-    $(".showmenu-pc").click(function () {
-        $(".menu-pc").addClass(" show");
-
-    });
-    $(".showmenu-mobile").click(function () {
-        $(".menu-pc").addClass("show")
-
-    });
-    $(".closemenu-pc").click(function () {
-        $(".menu-pc").removeClass("show")
-    });
-
-    $(".close-showmenu-mobile").click(function () {
-        setTimeout(() => {
-            $(".menu-pc").removeClass(" show")
-        }, 500)
-    });
-    $(".openbtn").click(function () {
-        $(".openbtn").toggleClass('active');
-    });
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > 1) {
-            $("#header").addClass('bg-white')
-        } else {
-            $("#header").removeClass('bg-white')
-        }
-    });
-
-
-});
-
-(function(){
-    function id(v){ return document.getElementById(v); }
-    function loadbar() {
-      var ovrl = id("overlay"),
-          prog = id("progress"),
-          stat = id("progstat"),
-          number = id("progNumber");
-        let step = 0;
-      const intervalLoading = setInterval(() => {
-        step += 10;
-        var perc =  step +"%";
-        prog.style.width = perc;
-        stat.innerHTML = "Loading..."  ;
-        number.innerHTML = step;
-        if(step == 100) return doneLoading();
-      }, 200)
-  
-     
-      function doneLoading(){
-        clearInterval(intervalLoading)
-        ovrl.style.opacity = 0;
-        setTimeout(function(){ 
-          ovrl.style.display = "none";
-
-          setTimeout(() => {
-            $("#banner .sub-title").addClass("animate__animated animate__bounceInUp")
-            $("#banner .sub-title").removeClass("d-none");
-            $("#banner h1").text("可能性の扉を解き放て")
-          }, 1500)
-        }, 1200);
-      }
-        
+  localStorage.setItem('sources', JSON.stringify([]));
+  $(".checkbox-print").click(function () {
+    let source = localStorage.getItem('sources') == null ? [] : JSON.parse(localStorage.getItem('sources'));
+    let src = $(this).parent().find('img').attr('src');
+    if (source.includes(src)) {
+      source = source.filter(e => e != src);
+    } else {
+      source.push(src);
     }
-    document.addEventListener('DOMContentLoaded', loadbar, false);
-  }());
+    console.log(source);
+    localStorage.setItem('sources', JSON.stringify(source))
+  })
+  $('.btn-print').click(() => {
+    let source = localStorage.getItem('sources') == null ? [] : JSON.parse(localStorage.getItem('sources'));
+    if (!source.length) {
+      alert("画像を選択してください！");
+      return;
+    }
+    window.open('./print.html', '_blank');
+  })
+});
