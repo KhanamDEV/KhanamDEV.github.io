@@ -1,18 +1,4 @@
 $(function () {
-
-  function toggleAllowPopup() {
-    function toggle(current) {
-      console.log(`Current value: ${current.value}`);
-      browser.browserSettings.allowPopupsForUserEvents.set({ value: !current.value });
-    }
-    browser.browserSettings.allowPopupsForUserEvents.get({}).then(toggle);
-  }
-
-  browser.browserAction.onClicked.addListener(() => {
-    toggleAllowPopup();
-  });
-
-
   localStorage.setItem('sources', JSON.stringify([]));
   $(".checkbox-print").click(function () {
     let source = localStorage.getItem('sources') == null ? [] : JSON.parse(localStorage.getItem('sources'));
