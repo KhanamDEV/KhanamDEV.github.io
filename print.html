@@ -6,15 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <div id="content"></div>
+    <header id="header">
+        <div class="container">
+            <div></div>
+            <h1>植木資料</h1>
+            <div class="wrap-button">
+                <button class="btn btn-print"><i class="fa fa-print" aria-hidden="true"></i>
+                    印刷</button>
+            </div>
+
+        </div>
+    </header>
+    <div class="container">
+        <div id="content"></div>
+    </div>
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/html2pdf.bundle.min.js"></script>
     <script>
         $(function () {
+            let finalPdf = null;
             function splitArray(arr, chunkSize) {
                 let result = [];
                 for (let i = 0; i < arr.length; i += chunkSize) {
@@ -40,12 +55,13 @@
                 html2pdf().from(clonedElement).set({
                     jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }
                 }).toPdf().get('pdf').then(function (pdf) {
-                    window.open(pdf.output('bloburl'), '_blank');
-                    setTimeout(function () {
-                        window.close()
-                    }, 1000)
+                    finalPdf = pdf;
                 });
             }, 100);
+
+            $(".btn-print").click(function (){
+                window.open(finalPdf.output('bloburl'), '_blank');
+            })
         })
 
     </script>
