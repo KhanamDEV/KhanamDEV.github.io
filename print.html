@@ -54,6 +54,7 @@
             setTimeout(function () {
                 html2pdf().from(clonedElement).set({
                     jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' },
+                    image:        { type: 'jpg', quality: 1 },
                     html2canvas:  { dpi: 300, scale: 3, letterRendering: true, useCORS: true }
                 }).toPdf().get('pdf').then(function (pdf) {
                     finalPdf = pdf;

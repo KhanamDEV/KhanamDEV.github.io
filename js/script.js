@@ -20,7 +20,7 @@ $(function () {
     localStorage.setItem('sources', JSON.stringify(source))
     setTimeout(function () {
       Swal.close()
-    }, 1000)
+    }, 700)
   })
   $('.btn-print').click(() => {
     let source = localStorage.getItem('sources') == null ? [] : JSON.parse(localStorage.getItem('sources'));
