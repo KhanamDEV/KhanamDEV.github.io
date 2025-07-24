@@ -1,272 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css.map">
-    <link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsive.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TourRadar Itinerary Clone with Moving Car</title>
+
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+
+  <style>
+    body { margin: 0; padding: 0; font-family: sans-serif; }
+    #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+    .marker {
+      background-color: #1E90FF;
+      color: #fff;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      font-weight: bold;
+      border: 2px solid #fff;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+  </style>
 </head>
-
 <body>
+  <div id="map"></div>
 
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmV3dHd0IiwiYSI6ImNseDdvOHBqMTBqazIybHB4azdyaW5raDgifQ.-fcygulSaShGxkUFHJyP_g';
 
-<header id="header">
-    <div class="container">
-        <div></div>
-        <h1>植木資料</h1>
-        <div class="wrap-button">
-            <button class="btn btn-print"><i class="fa fa-print" aria-hidden="true"></i>
-                印刷</button>
-        </div>
+    const itinerary = [
+  { lng: 105.8542, lat: 21.0285, name: "Hà Nội", day: 1, description: "Khởi hành từ Hà Nội. Tham quan phố cổ, Văn Miếu và hồ Hoàn Kiếm." },
+  { lng: 107.1839, lat: 20.9101, name: "Hạ Long", day: 2, description: "Du ngoạn vịnh Hạ Long, thăm hang Thiên Cung, Hòn Gà Chọi." },
+  { lng: 107.5909, lat: 16.4637, name: "Huế", day: 3, description: "Tham quan Đại Nội, lăng Tự Đức, Chùa Thiên Mụ." },
+  { lng: 108.2022, lat: 16.0544, name: "Đà Nẵng", day: 4, description: "Ghé Ngũ Hành Sơn, cầu Rồng, biển Mỹ Khê." },
+  { lng: 108.3380, lat: 15.8801, name: "Hội An", day: 5, description: "Dạo phố cổ Hội An, thăm Chùa Cầu, nhà cổ, ăn đặc sản." },
+  { lng: 106.6297, lat: 10.8231, name: "Hồ Chí Minh", day: 6, description: "Khám phá TP.HCM: Dinh Độc Lập, chợ Bến Thành, Nhà thờ Đức Bà." },
+  { lng: 106.4992, lat: 11.1445, name: "Củ Chi", day: 7, description: "Tham quan địa đạo Củ Chi – dấu ấn chiến tranh." },
+  { lng: 106.1173, lat: 10.3838, name: "Chợ Nổi Cái Bè", day: 8, description: "Tham quan chợ nổi Cái Bè, làng nghề truyền thống, nghe đờn ca tài tử." }
+];
 
-    </div>
-</header>
-<main id="main">
-    <div class="container">
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-                        type="button" role="tab" aria-controls="pills-home" aria-selected="true">低中木</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
-                        type="button" role="tab" aria-controls="pills-profile" aria-selected="false">常緑樹</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
-                        type="button" role="tab" aria-controls="pills-contact" aria-selected="false">落葉樹</button>
-            </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/1/1.アジサイ・アナベル.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/1/2.クチナシ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/1/3.タマシダ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/1/4.ドウダンツツジ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/1/5.トクサ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/1/6.マホニアコンフューサ.jpg" alt="">
-                </div>
-            </div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/2/1.イチゴノキ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/2/2.オリーブ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/2/3.カクレミノ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/2/4.カラタネオガタマ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/2/5.ギンバイカ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/2/6.キンモクセイ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/2/7.シマトネリコ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/2/8.シラカシ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/2/9.シルバープリペット.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/2/10.ソヨゴ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/2/11.トキワマンサク.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/2/12.ドドナエア.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/2/13.フェイジョア.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/2/14.ブラシノキ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/2/15.ヤマモモ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/2/16.ユーカリ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/2/17.大名竹.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/2/18.常緑ヤマボウシ.jpg" alt="">
-                </div>
-            </div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/3/1.アオダモ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/3/2.アオハダ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/3/3.エゴノキ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/3/4.コハウチワカエデ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/3/5.サルスベリ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/3/6.ジューンベリー.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/3/7.ハウチワカエデ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/3/8.ハナミズキ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/3/9.ヒメシャラ.jpg" alt="">
-                </div>
-                <div class="item-print">
-                    <div class="checkbox-print">
-                        <input class="form-check-input" type="checkbox" value="" id="">
-                    </div>
-                    <img src="./images/3/10.モミジ.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [itinerary[0].lng, itinerary[0].lat],
+      zoom: 5
+    });
 
+    map.on('load', () => {
+      const routeCoordinates = itinerary.map(stop => [stop.lng, stop.lat]);
 
-<script src="./js/jquery-3.7.1.min.js"></script>
-<script src="./js/bootstrap.min.js"></script>
-<script src="./js/bootstrap.min.js.map"></script>
-<script src="./js/html2pdf.bundle.min.js"></script>
-<script src="./js/script.js"></script>
+      map.addSource('route', {
+        type: 'geojson',
+        data: {
+          type: 'Feature',
+          geometry: {
+            type: 'LineString',
+            coordinates: routeCoordinates
+          }
+        }
+      });
+
+      map.addLayer({
+        id: 'route-line',
+        type: 'line',
+        source: 'route',
+        layout: { 'line-join': 'round', 'line-cap': 'round' },
+        paint: {
+          'line-color': '#1E90FF',
+          'line-width': 4
+        }
+      });
+
+      const bounds = new mapboxgl.LngLatBounds();
+      routeCoordinates.forEach(coord => bounds.extend(coord));
+      map.fitBounds(bounds, { padding: 50 });
+
+      itinerary.forEach(stop => {
+        const el = document.createElement('div');
+        el.className = 'marker';
+        el.textContent = stop.day;
+
+        new mapboxgl.Marker(el)
+          .setLngLat([stop.lng, stop.lat])
+          .setPopup(new mapboxgl.Popup({ offset: 25 })
+            .setHTML(`<h3>Ngày ${stop.day}: ${stop.name}</h3><p>${stop.description}</p>`))
+          .addTo(map);
+      });
+
+      const carIcon = document.createElement('div');
+      carIcon.style.backgroundImage = "url('https://tweetworldtravel.s3.ap-southeast-2.amazonaws.com/navigation.png')";
+      carIcon.style.width = '32px';
+      carIcon.style.height = '32px';
+      carIcon.style.backgroundSize = 'contain';
+      carIcon.style.zIndex = '10';
+
+      const carMarker = new mapboxgl.Marker(carIcon)
+        .setLngLat(routeCoordinates[0])
+        .addTo(map);
+
+      const routeLine = turf.lineString(routeCoordinates);
+      const routeLength = turf.length(routeLine); 
+
+      let progress = 0;
+      const speed = 2; 
+
+      function animateCar() {
+        const point = turf.along(routeLine, progress);
+        if (point) {
+          carMarker.setLngLat(point.geometry.coordinates);
+        }
+
+        progress += speed;
+        if (progress > routeLength) progress = 0; 
+
+        requestAnimationFrame(animateCar);
+      }
+
+      animateCar(); 
+    });
+  </script>
 </body>
-
 </html>
